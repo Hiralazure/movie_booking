@@ -1,0 +1,23 @@
+{
+  "name": "movie_booking",
+  "version": "1.0.0",
+  "description": "A beginner-level movie booking system with user authentication, movie management, theatre allocation, and secure seat booking.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index",
+    "build": "tsc -p .",
+    "dev": "tsc-watch --onSuccess \"node dist/index.js \""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.2",
+    "tsc-watch": "^7.2.0",
+    "typescript": "^6.0.2"
+  }
+}
