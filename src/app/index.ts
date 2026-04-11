@@ -1,10 +1,11 @@
 import express from "express";
-import type { Request, Response } from "express";
+import { authRouter } from "./auth/routes";
+import { authenticationMiddleware } from "./auth/middleware/auth.middleware";
 export function createApplication() {
   const app = express();
   app.use(express.json());
-  app.get("/", (req: Request, res: Response) => {
-    return res.json({ message: "all is well" });
-  });
+  app.use(authenticationMiddleware);
+  app.use("/auth", authRouter);
+
   return app;
 }
